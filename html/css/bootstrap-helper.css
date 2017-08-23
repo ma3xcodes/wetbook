@@ -1,0 +1,143 @@
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+    outline: none !important;
+}
+.no-padding{
+    padding: 0;
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+.margin{
+    margin: 15px;
+}
+.margin-top{
+    margin-top: 15px;
+}
+.margin-bottom{
+    margin-bottom: 15px;
+}
+.margin-left{
+    margin-left: 15px;
+}
+.margin-right{
+    margin-right: 15px;
+}
+
+.aside-profile > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.aside-profile > div:first-child img{
+    margin: 0;
+}
+.aside-profile > div:last-child span, .aside-profile > div:last-child span{
+    display: block;
+}
+.aside-profile a:hover{
+    text-decoration: none;
+}
+.aside-menu{
+    margin-bottom: 0;
+}
+.aside-menu a.list-group-item{
+    border-color: transparent;
+    border-radius: 0;
+    color: #3097D1;
+    padding: 5px 10px;
+}
+.aside-menu a.list-group-item:focus, .aside-menu a.focused{
+    text-decoration: none;
+    color: #d3e0e9;
+    background-color: #4882bb;
+    opacity: .7;
+}
+.aside-menu .icon{
+    float: right;
+    position: relative;
+    top: .5rem;
+    right: .5rem;
+}
+.type-post-buttons div > button{
+    position: relative;
+}
+.type-post-buttons div > button:focus:before{
+    content: "\f0de";
+    color: #d3e0e9;
+    width: 1em;
+    height: 1em;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.7rem;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+.type-post-buttons div:first-child > button:before{
+    display: block;
+}
+
+.helper-navbar-color{
+    background-color: #4882bb !important;
+}
+.helper-navbar-color-desktop a{
+    color: #ffffff !important;
+}
+.helper-navbar-color .dropdown-menu a{
+    color: #333 !important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #eee;
+    color: #333 !important;
+}
+.head-logo{
+    width: 3rem;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.head-profile-avatar{
+    border-radius: 2.5px;
+    width: 2rem;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.row-register{
+
+}
+.register-message{
+    background-image: url(http://www.myriadgroup.com/wp-content/themes/timber/img/star-network.png);
+    background-position: center;
+    background-size: contain;
+    height: 90vh;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.register-message > div{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+    opacity: .9;
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 1200px){}
+@media (max-width: 1199px){}
+@media (min-width: 992px){}
+@media (max-width: 991px){}
+@media (min-width: 768px) {}
+@media (max-width: 767px){}
+@media screen and (min-width: 768px){}
+@media screen and (max-width: 767px){}
+@media (max-device-width: 480px) and (orientation: landscape){}
+@media (min-width: 992px) and (max-width: 1199px){}
+
