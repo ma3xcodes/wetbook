@@ -4,6 +4,9 @@
 .no-padding{
     padding: 0;
 }
+.padding-top{
+    padding-top: 15px;
+}
 
 .no-margin{
     margin: 0 !important;
@@ -128,6 +131,91 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+.cover-content{
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25em;
+    overflow: hidden;
+}
+.cover-content > div:first-child{
+    position: absolute;
+    bottom: 3em;
+    left: 21em;
+}
+.cover-content > div:last-child{
+    position: absolute;
+    bottom: 5em;
+    right: 3em;
+}
+.cover-content > div > h2, .cover-content > div > h4{
+    font-size: 2rem;
+    text-shadow: 2px 2px #8c8c8c;
+}
+.cover-content > div > h2{
+    color: #ffffff;
+
+}
+.cover-content > div > h4{
+    color: #e0e0e0;
+}
+.cover-parent > .profile-menu-buttons{
+    background-color: #E8E8E8;
+    border-left: 1px #ccd0d2 solid;
+    border-right: 1px #ccd0d2 solid;
+    border-bottom: 1px #ccd0d2 solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 3.1em;
+    position: relative;
+    width: 100%;
+}
+.cover-parent > .profile-menu-buttons > div:first-child{
+    border-bottom-left-radius: 5px;
+}
+.cover-parent > .profile-menu-buttons > div:last-child{
+    border-bottom-right-radius: 5px;
+}
+.cover-parent > .profile-menu-buttons > div{
+    background-color: #ffffff;
+    height: 3em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cover-parent > .profile-menu-buttons > .profile-menu-avatar{
+    position: relative;
+    width: 22em;
+}
+.cover-parent > .profile-menu-buttons > .profile-menu-button{
+    text-align: center;
+    width: 22%;
+}
+.cover-parent > .profile-menu-buttons > div > img{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 15em;
+}
+.cover-parent > .profile-menu-buttons > div > a{
+    display: block;
+    line-height: 3em;
+    position: relative;
+}
+.cover-parent > .profile-menu-buttons > div > a:active:before,.cover-parent > .profile-menu-buttons > div > a.selected:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccd0d2;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
 }
 
 @media (min-width: 1200px){}

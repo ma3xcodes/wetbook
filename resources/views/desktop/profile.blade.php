@@ -4,29 +4,44 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-xs-12">
+                    <div class="cover-parent">
+                        <div class="cover-content" style="background-image: url({{asset('assets/images/mountains1.png')}})">
+                            <div class="">
+                                <h2>{{auth::user()->first_name." ".auth::user()->last_name}}</h2>
+                                <h4>{{auth::user()->username}}</h4>
+                            </div>
+                            <div>
+                                <button class="btn btn-xs">
+                                    <i class="icon icon-pencil"></i> Editar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="profile-menu-buttons">
+                            <div class="profile-menu-avatar">
+                                <img src="{{asset(auth::user()->profile->avatar->photo_medium)}}" class="img-thumbnail"/>
+                            </div>
+                            <div class="profile-menu-button">
+                                <a href="#" class="selected">Link 1</a>
+                            </div>
+                            <div class="profile-menu-button">
+                                <a href="#">Link 2</a>
+                            </div>
+                            <div class="profile-menu-button">
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-content">
+
+                        </div>
+                    </div>
+                </div>
                 <!-- SIDEBAR -->
                 @include('includes.profile-aside')
-                <div class="col-md-8">
+                <div class="col-md-8 padding-top">
                     <div class="profile">
-                        <h1 class="page-header">{{auth::user()->username}}</h1>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="{{asset(auth::user()->profile->avatar->photo_medium)}}" class="img-thumbnail"/>
-                            </div> <!-- col md 4 -->
-                            <div class="col-md-8">
-                                <ul>
-                                    <li><strong>Name:</strong> {{auth::user()->first_name . " " . auth::user()->middle_name}}</li>
-                                    <li><strong>Email:</strong> johndoe@gmail.com</li>
-                                    <li><strong>City:</strong> Boston</li>
-                                    <li><strong>State:</strong> Massachusetts</li>
-                                    <li><strong>Gender:</strong> Male</li>
-                                    <li><strong>Age:</strong> {{auth::user()->birthday ? auth::user()->age : 'Not definned'}}</li>
-                                    <li><strong>Profession:</strong> Web Developer</li>
-                                </ul>
-                            </div> <!-- col md 8 -->
-                        </div> <!-- row -->
-
-                        <br/><br/>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="panel panel-default">
