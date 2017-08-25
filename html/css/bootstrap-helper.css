@@ -1,5 +1,11 @@
+body{
+    background-color: #E9EBEE;
+}
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
     outline: none !important;
+}
+.hidden-not-important{
+    display: none;
 }
 .no-padding{
     padding: 0;
@@ -139,12 +145,34 @@
     height: 25em;
     overflow: hidden;
 }
-.cover-content > div:first-child{
+.cover-content > .edit-cover-button{
+    position: relative;
+    display: inline-block;
+    top: 1rem;
+    left: 1rem;
+}
+.cover-content > .edit-cover-button > a{
+    color: white;
+    padding: 7.5px;
+}
+.cover-content:hover > .edit-cover-button > a{
+    background-color: black;
+    border-radius: 2.5px;
+    border: thin solid #e2e2e2;
+    text-decoration: none;
+}
+.cover-content:hover > .edit-cover-button > a > span.hidden-not-important{
+    display: inline-block;
+}
+.cover-content > .edit-cover-button{
+    display: block;
+}
+.cover-content > div.cover-user-names{
     position: absolute;
     bottom: 3em;
     left: 21em;
 }
-.cover-content > div:last-child{
+.cover-content > div.cover-profile-edit-button{
     position: absolute;
     bottom: 5em;
     right: 3em;
@@ -210,8 +238,8 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #ccd0d2;
-    bottom: 0;
+    border-bottom: 10px solid #E9EBEE;
+    bottom: -1px;
     left: 0;
     margin: auto;
     position: absolute;

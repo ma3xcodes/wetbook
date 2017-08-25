@@ -7,13 +7,21 @@
                 <div class="col-xs-12">
                     <div class="cover-parent">
                         <div class="cover-content" style="background-image: url({{asset('assets/images/mountains1.png')}})">
-                            <div class="">
+                            <div class="edit-cover-button">
+                                    <a href="#">
+                                        <span>
+                                            <i class="icon icon-camera"></i>
+                                        </span>
+                                        <span class="hidden-not-important">Actualizar cover</span>
+                                    </a>
+                            </div>
+                            <div class="cover-user-names">
                                 <h2>{{auth::user()->first_name." ".auth::user()->last_name}}</h2>
                                 <h4>{{auth::user()->username}}</h4>
                             </div>
-                            <div>
+                            <div class="cover-profile-edit-button">
                                 <button class="btn btn-xs">
-                                    <i class="icon icon-pencil"></i> Editar
+                                    <i class="icon icon-pencil"></i> Editar Perfil
                                 </button>
                             </div>
                         </div>

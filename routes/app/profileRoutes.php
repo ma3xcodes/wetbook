@@ -2,4 +2,5 @@
 
 Route::get('/profile', function (){
     return view('profile');
-})->name('main.profile');
+})->name('main.profile')
+->middleware('auth');
