@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row row-register">
         <div class="col-xs-7 text-center register-message">
-            <div>
+            <!--<div>
                 <h1><strong>Bootstrap</strong> Registration Form</h1>
                 <div class="description">
                     <p>
@@ -16,7 +16,7 @@
                     <a class="btn btn-success" href="#">Button 1</a>
                     <a class="btn btn-link" href="#">Button 2</a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="col-xs-5 form-box">
             <div class="panel panel-default">

@@ -10,8 +10,35 @@ body{
 .no-padding{
     padding: 0;
 }
+.padding{
+    padding: 15px;
+}
+.padding-left{
+    padding-left: 15px;
+}
+.padding-right{
+    padding-right: 15px;
+}
 .padding-top{
     padding-top: 15px;
+}
+.padding-bottom{
+    padding-bottom: 15px;
+}
+.padding-half{
+    padding: 7.5px;
+}
+.padding-half-left{
+    padding-left: 7.5px;
+}
+.padding-half-right{
+    padding-right: 7.5px;
+}
+.padding-half-top{
+    padding-top: 7.5px;
+}
+.padding-half-bottom{
+    padding-bottom: 7.5px;
 }
 
 .no-margin{
@@ -31,6 +58,25 @@ body{
 }
 .margin-right{
     margin-right: 15px;
+}
+.margin-half{
+    margin: 7.5px;
+}
+.margin-half-top{
+    margin-top: 7.5px;
+}
+.margin-half-bottom{
+    margin-bottom: 7.5px;
+}
+.margin-half-left{
+    margin-left: 7.5px;
+}
+.margin-half-right{
+    margin-right: 7.5px;
+}
+
+.inline-content{
+    display: inline-block;
 }
 
 .aside-profile > div{
@@ -120,10 +166,12 @@ body{
 
 }
 .register-message{
-    background-image: url(http://www.myriadgroup.com/wp-content/themes/timber/img/star-network.png);
+    /*background-image: url(http://www.myriadgroup.com/wp-content/themes/timber/img/star-network.png);*/
+    background-image: url("/assets/images/education-network.png");
     background-position: center;
     background-size: contain;
-    height: 90vh;
+    background-repeat: no-repeat;
+    height: 80vh;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -154,12 +202,22 @@ body{
 .cover-content > .edit-cover-button > a{
     color: white;
     padding: 7.5px;
+    opacity: .7;
 }
 .cover-content:hover > .edit-cover-button > a{
     background-color: black;
     border-radius: 2.5px;
     border: thin solid #e2e2e2;
+    vertical-align: middle;
     text-decoration: none;
+    transition: all .5s;
+}
+.cover-content > .edit-cover-button > a > span:first-child > i{
+    font-size: 10px;
+    transition: all .5s;
+}
+.cover-content:hover > .edit-cover-button > a > span:first-child > i{
+    font-size: initial;
 }
 .cover-content:hover > .edit-cover-button > a > span.hidden-not-important{
     display: inline-block;
@@ -219,13 +277,33 @@ body{
     text-align: center;
     width: 22%;
 }
-.cover-parent > .profile-menu-buttons > div > img{
+.cover-parent > .profile-menu-buttons > div > div{
     position: absolute;
     bottom: 2rem;
     left: 0;
     right: 0;
     margin: auto;
     max-width: 15em;
+}
+.cover-parent > .profile-menu-buttons > div .profile-photo-edit-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7.5px;
+    width: 100%;
+}
+.cover-parent > .profile-menu-buttons > div:hover .profile-photo-edit-button{
+    background: black;
+    opacity: .7;
+    transition: all .5s;
+}
+.cover-parent > .profile-menu-buttons > div:hover .profile-photo-edit-button a span:last-child{
+    display: inline-block;
+}
+.cover-parent > .profile-menu-buttons > div .profile-photo-edit-button a{
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
 }
 .cover-parent > .profile-menu-buttons > div > a{
     display: block;
@@ -245,7 +323,55 @@ body{
     position: absolute;
     right: 0;
 }
+.photo-list-panel ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.photo-list-panel ul > li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.photo-list-panel ul > li img{
+    width: 6em;
+}
 
+.frind-list-content img{
+    width: 6em;
+}
+.frind-list-content a{
+    position: relative;
+}
+.frind-list-content a > span{
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    display: block;
+    font-size: 11.5px;
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.gradient{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    color: #ffffff;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+}
 @media (min-width: 1200px){}
 @media (max-width: 1199px){}
 @media (min-width: 992px){}

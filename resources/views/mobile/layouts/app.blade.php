@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ isset($tab_title) ? $tab_title : config('app.name', APP_NAME) }}</title>
+    <title>{{ isset($tab_title) ? $tab_title : config('app.name') }}</title>
     @section('styles')
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -60,7 +60,7 @@
                     @endif
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{asset('assets/logo/white-logo.png')}}" alt="" class="head-logo"> {{ SHORT_NAME }}
+                        <img src="{{asset('assets/logo/white-logo.png')}}" alt="" class="head-logo"> {{ config('app.name') }}
                     </a>
                 </div>
 

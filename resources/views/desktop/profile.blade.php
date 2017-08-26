@@ -12,7 +12,7 @@
                                         <span>
                                             <i class="icon icon-camera"></i>
                                         </span>
-                                        <span class="hidden-not-important">Actualizar cover</span>
+                                        <span class="hidden-not-important">Editar portada</span>
                                     </a>
                             </div>
                             <div class="cover-user-names">
@@ -21,13 +21,25 @@
                             </div>
                             <div class="cover-profile-edit-button">
                                 <button class="btn btn-xs">
-                                    <i class="icon icon-pencil"></i> Editar Perfil
+                                    <i class="icon icon-pencil"></i> Editar perfil
                                 </button>
                             </div>
                         </div>
                         <div class="profile-menu-buttons">
                             <div class="profile-menu-avatar">
-                                <img src="{{asset(auth::user()->profile->avatar->photo_medium)}}" class="img-thumbnail"/>
+                                <div class="profile-menu-avata-content">
+                                    <img src="{{asset(auth::user()->profile->avatar->photo_medium)}}" class="img-thumbnail"/>
+                                    <div class="profile-photo-edit-button">
+                                        <a href="#">
+                                            <span>
+                                                <i class="icon icon-camera"></i>
+                                            </span>
+                                            <span class="hidden-not-important">
+                                                Editar foto
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="profile-menu-button">
                                 <a href="#" class="selected">Link 1</a>
