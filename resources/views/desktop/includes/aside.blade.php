@@ -35,34 +35,24 @@
         </div> <!-- panel-body -->
     </div> <!-- panel -->
     <div class="panel panel-default groups">
-        <div class="panel-heading">
-            <h3 class="panel-title">Latest Groups</h3>
-        </div>
         <div class="panel-body">
-            <div class="group-item">
-                <img src="img/group.png"/>
-                <h4><a href="#">Sample Group One</a></h4>
-                <p>This is a Dobble social network sample group</p>
-            </div> <!-- group-item -->
-            <div class="clearfix"></div> <!-- clear floats -->
-            <div class="group-item">
-                <img src="img/group.png"/>
-                <h4><a href="#">Sample Group Two</a></h4>
-                <p>This is a Dobble social network sample group</p>
-            </div> <!-- group-item -->
-            <div class="clearfix"></div> <!-- clear floats -->
-            <div class="group-item">
-                <img src="img/group.png"/>
-                <h4><a href="#">Sample Group Three</a></h4>
-                <p>This is a Dobble social network sample group</p>
-            </div> <!-- group-item -->
-            <div class="clearfix"></div> <!-- clear floats -->
-            <a class="btn btn-primary" href="#">View All Groups</a>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <span class="icon-stack">
+                        <i class="icon-circle icon-stack-base"></i>
+                        <i class="icon-group icon-light"></i>
+                    </span>
+                    Grupos
+                    <a href="#" class="pull-right" style="display: -webkit-inline-box">
+                        <i class="icon icon-plus"></i>
+                    </a>
+                </div>
+            </div>
         </div> <!-- panel body -->
     </div> <!-- groups panel -->
     <div class="footer">
         <footer>
-            <p>&copy; {{APP_NAME}}</p>
+            <p>&copy; {{config('app.name')}} · Language <a href="#">{{app()->getLocale()}}</a></p>
         </footer>
     </div>
 </div> <!-- md 4 -->

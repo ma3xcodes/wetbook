@@ -79,6 +79,10 @@ body{
     display: inline-block;
 }
 
+.profile-popover{
+    max-width: none;
+}
+
 .aside-profile > div{
     display: inline-block;
     vertical-align: middle;
@@ -187,7 +191,7 @@ body{
     transform: translateY(-50%);
 }
 .cover-content{
-    background-position: center bottom;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 25em;
@@ -371,6 +375,57 @@ body{
     background-origin: padding-box;
     -webkit-background-clip: border-box;
     background-clip: border-box;
+}
+.popover.profile-popover{
+    box-shadow: 0 0 15px grey;
+}
+.content-popover > div{
+    width: 20em;
+}
+.content-popover .user-cover{
+    height: 8em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.content-popover .user-info{
+    height: 5.5em;
+}
+.content-popover .user-info div{
+    top: 6.5rem ;
+    left: 8em;
+    position: absolute;
+}
+.content-popover .user-info div > p{
+    font-weight: bold;
+    color: white;
+    width: 15.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.content-popover .user-info img{
+    bottom: 3em;
+    left: 1em;
+    position: absolute;
+}
+.content-popover .user-buttons{
+    border-top: thin solid #7f7f7f;
+    height: 2.5em;
+}
+.content-popover .user-buttons a{
+    display: block;
+    color: darkgrey;
+    line-height: 2.5em;
+    text-decoration: none;
+}
+.content-popover .user-buttons a:hover{
+    background-color: darkgrey;
+    color: white;
+}
+.content-popover .user-buttons a:not(:last-child){
+    border-right: thin solid #7f7f7f;
 }
 @media (min-width: 1200px){}
 @media (max-width: 1199px){}

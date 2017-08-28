@@ -93,3 +93,52 @@
         </div> <!-- container -->
     </section>
 @endsection
+
+@section('scripts')
+    @parent
+    <script>
+        $('.popover').on('hidden.bs.popover', function () {
+            $(this).popover('destroy');
+        });
+        $(document).on('mouseleave', '.popover', function(){
+            element = $(this);
+            element.popover('destroy');
+        });
+        $('.frind-list-content > .friend-content').mouseenter(function(){
+
+            let element = $(this);
+            let options = {
+                trigger: 'manual',
+                placement: function (context, source) {
+                    var position = $(source).offset();
+                    var elePosition = $(window).scrollTop();
+                    var final = parseInt(position.top)-parseInt(elePosition);
+                    if (final < 150){
+                        return "bottom";
+                    }
+
+                    return "top";
+                },
+                html: true,
+                template: '<div class="popover no-padding profile-popover margin" role="tooltip"><div class="arrow"></div><h3 class="popover-title">Title</h3><div class="popover-content no-padding">content</div></div>',
+                container: 'body'
+            };
+
+            $.ajax({
+                type:'get',
+                url: '{{route('user.preview')}}',
+                data: {'userid':element.find('a').data('userid')},
+                delay: { show: 100, hide: 1 },
+                beforeSend: function(){
+
+                },
+                success: function(response){
+                    options.content = response.view;
+                    if($('.popover').length>0) $('.popover').popover('hide').popover('destroy');
+                    element.popover(options).popover('show');
+                }
+            });
+            //element.popover(options).popover('show');
+        });
+    </script>
+@endsection

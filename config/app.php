@@ -170,6 +170,8 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         //Device detection
         Jenssegers\Agent\AgentServiceProvider::class,
+        //Vinkla Hashids
+        Vinkla\Hashids\HashidsServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -180,6 +182,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Modules\Groups\GroupsServiceProvider::class,
     ],
 
     /*
@@ -231,6 +234,8 @@ return [
 
         //Device detection
         'Agent' => Jenssegers\Agent\Facades\Agent::class,
+        //Vinkla Hashids
+        'Hashids' => Vinkla\Hashids\Facades\Hashids::class
     ],
 
 ];
