@@ -63,7 +63,7 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{asset(auth::user()->profile->avatar->photo_small)}}" alt="profile-avatar" width="20" class="head-profile-avatar"> {{ Auth::user()->username }} <span class="caret"></span>
+                                    <img src="{{asset(auth::user()->profile->avatar->photo_small)}}" alt="profile-avatar" width="20" class="head-profile-avatar"> {{ Auth::user()->user_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

@@ -24,6 +24,7 @@ class Profile extends Model
         'fav_animals',
         'religion',
         'photo_id',
+        'cover_id',
         'public_folder'
     ];
     public function avatar()

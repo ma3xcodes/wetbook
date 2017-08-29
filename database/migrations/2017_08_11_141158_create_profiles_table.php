@@ -32,7 +32,7 @@ class CreateProfilesTable extends Migration
             $table->string('fav_animals')->nullable();
             $table->tinyInteger('religion', false)->nullable();
             $table->integer('photo_id');
-            $table->integer('front_id');
+            $table->integer('cover_id')->nullable();
             $table->string('public_folder');
             $table->timestamps();
         });

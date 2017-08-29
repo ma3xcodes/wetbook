@@ -408,6 +408,7 @@ body{
 .content-popover .user-info img{
     bottom: 3em;
     left: 1em;
+    max-width: 6em;
     position: absolute;
 }
 .content-popover .user-buttons{

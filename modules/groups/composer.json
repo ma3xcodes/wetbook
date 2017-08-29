@@ -1,0 +1,11 @@
+{
+    "name": "modules/groups",
+    "authors": [
+        {
+            "name": "Manuel Lopez",
+            "email": "ma3xcodes@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
