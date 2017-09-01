@@ -30,5 +30,10 @@ class Profile extends Model
     public function avatar()
     {
         return $this->hasOne(Photo::class, 'user_id', 'user_id')->where('is_avatar', true);
-    }//
+    }
+
+    public function cover()
+    {
+        return $this->hasOne(Photo::class, 'user_id', 'user_id')->where('is_cover', true)->first();
+    }
 }

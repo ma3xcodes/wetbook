@@ -5,19 +5,19 @@
             <div class="aside-profile">
                 <div>
                     <a href="{{route('main.profile')}}">
-                        <img src="{{auth::user()->profile->avatar->photo_small}}" alt="avatar" class="thumbnail no-padding" width="40">
+                        <img src="{{route('asset.manage', ['size'=>'small', 'id'=>\Hashids::encode(auth::user()->profile->avatar->id)])}}" alt="avatar" class="thumbnail no-padding" width="40">
                     </a>
                 </div>
                 <div>
                     <a href="{{ route('main.profile') }}">
                         <span>{{auth::user()->first_name . " " . auth::user()->last_name}}</span>
-                        <small>{{ auth::user()->username }}</small>
+                        <small>{{ auth::user()->user_name }}</small>
                     </a>
                 </div>
             </div>
             <div class="list-group aside-menu">
                 <a href="#" class="list-group-item link">
-                    Noticias <i class="icon icon-globe"></i>
+                    {{trans('home.aside.notices')}} <i class="icon icon-globe"></i>
                 </a>
                 <a href="#" class="list-group-item">
                     Fotos <i class="icon icon-picture"></i>
@@ -52,7 +52,7 @@
     </div> <!-- groups panel -->
     <div class="footer">
         <footer>
-            <p>&copy; {{config('app.name')}} · Language <a href="#">{{app()->getLocale()}}</a></p>
+            <p>&copy; {{config('app.name')}} · Language <a href="#" class="change-language-link">{{app()->getLocale()}}</a></p>
         </footer>
     </div>
 </div> <!-- md 4 -->

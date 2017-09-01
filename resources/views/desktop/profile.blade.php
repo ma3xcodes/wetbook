@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="cover-parent">
-                        <div class="cover-content" style="background-image: url({{asset('assets/images/mountains1.png')}})">
+                        <div class="cover-content" style="background-image: url({{asset((auth::user()->profile->cover()) ? auth::user()->profile->cover()->photo_large : 'assets/images/profile_bg.png')}})">
                             <div class="edit-cover-button">
                                     <a href="#">
                                         <span>

@@ -4,6 +4,10 @@ body{
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
     outline: none !important;
 }
+a.disabled {
+    /* And disable the pointer events */
+    pointer-events: none;
+}
 .hidden-not-important{
     display: none;
 }
@@ -194,6 +198,7 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: lightgray;
     height: 25em;
     overflow: hidden;
 }
@@ -422,8 +427,8 @@ body{
     text-decoration: none;
 }
 .content-popover .user-buttons a:hover{
-    background-color: darkgrey;
-    color: white;
+    background-color: #f5f5f5;
+    color: #4882bb;
 }
 .content-popover .user-buttons a:not(:last-child){
     border-right: thin solid #7f7f7f;

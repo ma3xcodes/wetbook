@@ -371,7 +371,10 @@ class Croppic{
         $feed->object    = $new_photo->id;
 
         $feed->save();*/
-        return $response;
+        return [
+            'status'    => 'success',
+            'photo_id'  => \Hashids::encode($new_photo->id)
+        ];
     }
 
 	public static function __GetUserFolder()

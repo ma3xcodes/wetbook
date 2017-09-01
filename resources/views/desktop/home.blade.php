@@ -37,24 +37,24 @@
                             </form>
                         </div> <!-- panel body -->
                     </div> <!-- panel -->
-                    @for($i=0;$i<=10;$i++)
+                    @foreach($posts->reverse() as $key => $post)
                     <div class="panel panel-default post">
                         <div class="panel-body">
-                            <div class="row panel-content-x{{$i}}">
+                            <div class="row panel-content-x{{$key}}">
                                 <div class="col-xs-12">
                                     <div style="display: block;max-width: 15%;display: inline-block;vertical-align: middle;margin: 0">
-                                        <a class="post-avatar thumbnail" href="profile.html" style="margin: 0">
-                                            <img src="{{asset('assets/images/profile-image-1.png')}}"/>
+                                        <a class="post-avatar thumbnail" href="{{$post->user_id==Auth::user()->id ? route('main.profile') : route('home')}}" style="margin: 0">
+                                            <img src="{{route('asset.manage', ['size'=>'small', 'id'=>\Hashids::encode(Auth::user()->profile->avatar->id)])}}"/>
                                         </a>
                                     </div>
                                     <div class="text-left" style="display: inline-block;vertical-align: middle;white-space: nowrap;max-width: 75%">
-                                        <div class="text-left" style="text-overflow:ellipsis;overflow: hidden;">DevUser{{$i}}</div>
+                                        <div class="text-left" style="text-overflow:ellipsis;overflow: hidden;">{{$post->user->user_name}}</div>
                                         <div class="text-left">
-                                            <small class="text-muted">time ago</small>
+                                            <small class="text-muted">{{$post->created_at->diffForHumans()}}</small>
                                         </div>
                                     </div>
                                     <div class="post-options" style="position: absolute;top: 0px;right: 15px;max-width: 10%;">
-                                        <button class="btn btn-link" data-container=".panel-content-x{{$i}}" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                                        <button class="btn btn-link" data-container=".panel-content-x{{$key}}" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Vivamus
 sagittis lacus vel augue laoreet rutrum faucibus.">
                                             <i class="icon icon-ellipsis-horizontal"></i>
                                         </button>
@@ -64,11 +64,16 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                                 <div class="col-xs-12">
                                     <div class="bubble">
                                         <div class="pointer">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat, magna ornare euismod consectetur, dolor arcu finibus erat, in finibus ex elit quis nunc. Aliquam erat volutpat. Cras posuere feugiat ligula nec lacinia. Suspendisse potenti. Quisque venenatis tincidunt magna, non molestie turpis. Vestibulum sagittis enim maximus sapien maximus vehicula. Aenean et condimentum ligula, id venenatis metus.
+                                            <p>
+                                                {{$post->text}}
+                                            </p>
+                                            @if($post->photo_id)
+                                                <img src="{{route('asset.manage',['size'=>'medium', 'id'=>\Hashids::encode($post->photo_id)])}}" alt="" style="max-width: 100%">
+                                            @endif
                                         </div> <!-- pointer -->
                                         <div class="pointer-border"></div>
                                     </div> <!-- bubble -->
-                                    <div class="post-actions" style="position: relative">
+                                    <div class="post-actions padding-half" style="position: relative">
 
                                         <a href="#"><i class="icon icon-heart"></i> Like</a> · <a href="#"><i class="icon icon-comment"></i> Commnet</a> · <a href="#"><i class="icon icon-share-alt"></i> Share</a>
                                         <div style="position: absolute;right: 15px;top: 0;">
@@ -111,7 +116,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                             </div> <!-- row -->
                         </div> <!-- panel body -->
                     </div> <!-- panel -->
-                    @endfor
+                    @endforeach
                 </div> <!-- md 8 -->
 
             </div> <!-- row -->

@@ -1,7 +1,7 @@
 <div class="content-popover">
     <div>
         <div class="user-options">
-            <div  class="user-cover" style="background-image: url({{asset('assets/images/mountains1.png')}})">
+            <div  class="user-cover gradient" style="background-image: url({{asset('assets/images/profile_bg.png')}});opacity: .8">
 
             </div>
             <div class="user-info">

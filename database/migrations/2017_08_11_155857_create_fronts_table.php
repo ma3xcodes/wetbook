@@ -13,7 +13,7 @@ class CreateFrontsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fronts', function (Blueprint $table) {
+        /*Schema::create('fronts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
             $table->boolean('is_defined');
@@ -23,7 +23,7 @@ class CreateFrontsTable extends Migration
             $table->string('front_small');
             $table->enum('front_status', [0,1,2,3,4]);
             $table->timestamps();
-        });
+        });*/
     }
 
     /**

@@ -11,22 +11,33 @@ use App\Http\Libraries\Croppic;
 
 class PostAjaxCtrl extends Controller
 {
+    public function __construct()
+    {
+    }
+
     public function createPost(Request $request)
     {
+        $photo = null;
+        /**
+         * Crear la foto y guardar en la base de datos
+         *
+         * @photo | array Contiene la foto en caso de que se guarde bien
+         */
         if($request->hasFile('file_name')){
-            //Crear la foto y fuardar en la base de datos
-            //Retorna el id
-            (new Croppic())->create_photo($request);
+            $photo = (new Croppic())->create_photo($request);
         }
 
         try{
             Post::create([
+                'user_id'   => \Auth::user()->id,
                 'type' => $request->get('post-type'),
-                'text' => $request->get('post-text')
+                'text' => $request->get('post-text'),
+                'photo_id'  => $photo ? \Hashids::decode($photo['photo_id'])[0] : null
             ]);
             return [
                 'satus' => 'succes',
-                'message'   => 'Post create succes.'
+                'message'   => 'Post create succes.',
+                'photo' => $photo ? $photo : null
             ];
         } catch (QueryException $e){
             return [

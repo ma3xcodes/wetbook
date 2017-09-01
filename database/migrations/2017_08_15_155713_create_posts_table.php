@@ -15,9 +15,10 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('type', [0,1,2,3,4]);
+            $table->integer('user_id');
+            $table->enum('type', [0,1,2,3,4]); //0 = text, 1 = text with image, 2,3,4 other options used in future
             $table->string('text');
-            $table->integer('photo-id')->nullable();
+            $table->integer('photo_id')->nullable();
             $table->enum('status', [0,1,2,3,4])->default(1);
             $table->timestamps();
         });

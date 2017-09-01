@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->boolean('is_avatar');
+            $table->boolean('is_cover')->default(false);
             $table->string('photo_origin');
             $table->string('photo_large');
             $table->string('photo_medium');
