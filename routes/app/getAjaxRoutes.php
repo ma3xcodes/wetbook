@@ -9,4 +9,8 @@ Route::group(['prefix'=>'getajax'], function(){
     Route::get('/showlanguages', [
         'uses'  => 'GetAjaxCtrl@showLanguages'
     ])->name('show.languages');
+    Route::get('/showphoto', [
+        'uses'  => 'GetAjaxCtrl@showPhoto'
+    ])->name('show.photo');
 });
+

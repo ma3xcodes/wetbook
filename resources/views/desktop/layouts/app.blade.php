@@ -63,7 +63,7 @@
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="{{asset(auth::user()->profile->avatar->photo_small)}}" alt="profile-avatar" width="20" class="head-profile-avatar"> {{ Auth::user()->user_name }} <span class="caret"></span>
+                                    <img src="{{route('asset.manage', ['size'=>'small', 'id'=>\Hashids::encode(Auth::user()->profile->avatar->id)])}}" alt="profile-avatar" width="20" class="head-profile-avatar"> {{ Auth::user()->user_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -106,36 +106,7 @@
                 crossorigin="anonymous"></script>
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{asset('plugins/izitoast/dist/js/iziToast.js')}}"></script>
-        <script>
-            (function(){
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    }
-                });
-                $('.change-language-link').click(function(){
-                    var element = $(this);
-                    var url = "{{route('show.languages')}}";
-                    $.ajax({
-                        type: 'GET',
-                        url: url,
-                        beforeSend: function(){
-
-                        },
-                        success: function(response){
-                            $('.main-modal').html(response).modal('toggle');
-                        }
-                    });
-                    return false;
-                });
-                $('html').on('mouseup', function(e) {
-                    if(!$(e.target).closest('.popover').length) {
-                        console.log($(e.target).closest('.popover'));
-                        $('.popover').popover('hide');
-                    }
-                });
-            })();
-        </script>
+        @include('includes.scripts')
     @show
 </body>
 </html>

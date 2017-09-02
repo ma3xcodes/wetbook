@@ -68,7 +68,9 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                                                 {{$post->text}}
                                             </p>
                                             @if($post->photo_id)
-                                                <img src="{{route('asset.manage',['size'=>'medium', 'id'=>\Hashids::encode($post->photo_id)])}}" alt="" style="max-width: 100%">
+                                                <a href="#" class="show-photo" data-url="{{route('show.photo', ['id'=>\Hashids::encode($post->photo_id)])}}">
+                                                    <img src="{{route('asset.manage',['size'=>'medium', 'id'=>\Hashids::encode($post->photo_id)])}}" alt="" style="max-width: 100%">
+                                                </a>
                                             @endif
                                         </div> <!-- pointer -->
                                         <div class="pointer-border"></div>
@@ -126,13 +128,13 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
         @parent
         <script>
             $(function () {
-                $('[data-toggle="popover"]').popover()
+                $('[data-toggle="popover"]').popover();
 
                 $('.post-home-form').submit(function(){
                     let element = $(this);
 
-                    var file_data = $('.post-home-form input[type="file"]').prop('files')[0];
-                    var form_data = new FormData();
+                    let file_data = $('.post-home-form input[type="file"]').prop('files')[0];
+                    let form_data = new FormData();
                     form_data.append('file_name', file_data);
                     form_data.append('post-type',0);
                     form_data.append('post-text', element.find('textarea[name="post-text"]').val());
@@ -160,16 +162,16 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                 });
                 $('.post-home-form input[type="file"]').change(function(){
                     $('.post-home-form input[name="post-type"]').val(1);
-                    var imgPath = $(this)[0].value;
-                    var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+                    let imgPath = $(this)[0].value;
+                    let extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
 
                     if (extn == "gif" || extn == "png" || extn == "jpg" || extn == "jpeg") {
                         if (typeof (FileReader) != "undefined") {
 
-                            var image_holder = $(".preview-photo");
+                            let image_holder = $(".preview-photo");
                             image_holder.empty();
 
-                            var reader = new FileReader();
+                            let reader = new FileReader();
                             reader.onload = function (e) {
                                 $("<img />", {
                                     "src": e.target.result,
@@ -177,7 +179,7 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
                                     "width": "80"
                                 }).appendTo(image_holder);
 
-                            }
+                            };
                             image_holder.show();
                             reader.readAsDataURL($(this)[0].files[0]);
                         } else {
