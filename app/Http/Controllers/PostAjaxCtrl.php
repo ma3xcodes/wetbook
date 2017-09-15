@@ -39,7 +39,12 @@ class PostAjaxCtrl extends Controller
                 'message'   => 'Post create succes.',
                 'photo' => $photo ? $photo : null
             ];
-        } catch (QueryException $e){
+        } catch (\Exception $e) {
+            return [
+                'status'    => 'error',
+                'message'   => $e->getMessage()
+            ];
+        }catch (QueryException $e){
             return [
                 'status'    => 'error',
                 'message'   => $e->getMessage()

@@ -1,0 +1,441 @@
+body{
+    background-color: #E9EBEE;
+}
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
+    outline: none !important;
+}
+.hidden-not-important{
+    display: none;
+}
+.no-padding{
+    padding: 0;
+}
+.padding{
+    padding: 15px;
+}
+.padding-left{
+    padding-left: 15px;
+}
+.padding-right{
+    padding-right: 15px;
+}
+.padding-top{
+    padding-top: 15px;
+}
+.padding-bottom{
+    padding-bottom: 15px;
+}
+.padding-half{
+    padding: 7.5px;
+}
+.padding-half-left{
+    padding-left: 7.5px;
+}
+.padding-half-right{
+    padding-right: 7.5px;
+}
+.padding-half-top{
+    padding-top: 7.5px;
+}
+.padding-half-bottom{
+    padding-bottom: 7.5px;
+}
+
+.no-margin{
+    margin: 0 !important;
+}
+.margin{
+    margin: 15px;
+}
+.margin-top{
+    margin-top: 15px;
+}
+.margin-bottom{
+    margin-bottom: 15px;
+}
+.margin-left{
+    margin-left: 15px;
+}
+.margin-right{
+    margin-right: 15px;
+}
+.margin-half{
+    margin: 7.5px;
+}
+.margin-half-top{
+    margin-top: 7.5px;
+}
+.margin-half-bottom{
+    margin-bottom: 7.5px;
+}
+.margin-half-left{
+    margin-left: 7.5px;
+}
+.margin-half-right{
+    margin-right: 7.5px;
+}
+
+.inline-content{
+    display: inline-block;
+}
+
+.profile-popover{
+    max-width: none;
+}
+
+.aside-profile > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.aside-profile > div:first-child img{
+    margin: 0;
+}
+.aside-profile > div:last-child span, .aside-profile > div:last-child span{
+    display: block;
+}
+.aside-profile a:hover{
+    text-decoration: none;
+}
+.aside-menu{
+    margin-bottom: 0;
+}
+.aside-menu a.list-group-item{
+    border-color: transparent;
+    border-radius: 0;
+    color: #3097D1;
+    padding: 5px 10px;
+}
+.aside-menu a.list-group-item:focus, .aside-menu a.focused{
+    text-decoration: none;
+    color: #d3e0e9;
+    background-color: #4882bb;
+    opacity: .7;
+}
+.aside-menu .icon{
+    float: right;
+    position: relative;
+    top: .5rem;
+    right: .5rem;
+}
+.type-post-buttons div > button{
+    position: relative;
+}
+.type-post-buttons div > button:focus:before{
+    content: "\f0de";
+    color: #d3e0e9;
+    width: 1em;
+    height: 1em;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.7rem;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+.type-post-buttons div:first-child > button:before{
+    display: block;
+}
+
+.helper-navbar-color{
+    background-color: #4882bb !important;
+}
+.helper-navbar-color-desktop a{
+    color: #ffffff !important;
+}
+.helper-navbar-color .dropdown-menu a{
+    color: #333 !important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #eee;
+    color: #333 !important;
+}
+.head-logo{
+    width: 3rem;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.head-profile-avatar{
+    border-radius: 2.5px;
+    width: 2rem;
+    display: inline-block !important;
+    vertical-align: middle;
+}
+.row-register{
+
+}
+.register-message{
+    /*background-image: url(http://www.myriadgroup.com/wp-content/themes/timber/img/star-network.png);*/
+    background-image: url("/assets/images/education-network.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80vh;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.register-message > div{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+    opacity: .9;
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.cover-content{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25em;
+    overflow: hidden;
+}
+.cover-content > .edit-cover-button{
+    position: relative;
+    display: inline-block;
+    top: 1rem;
+    left: 1rem;
+}
+.cover-content > .edit-cover-button > a{
+    color: white;
+    padding: 7.5px;
+    opacity: .7;
+}
+.cover-content:hover > .edit-cover-button > a{
+    background-color: black;
+    border-radius: 2.5px;
+    border: thin solid #e2e2e2;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .5s;
+}
+.cover-content > .edit-cover-button > a > span:first-child > i{
+    font-size: 10px;
+    transition: all .5s;
+}
+.cover-content:hover > .edit-cover-button > a > span:first-child > i{
+    font-size: initial;
+}
+.cover-content:hover > .edit-cover-button > a > span.hidden-not-important{
+    display: inline-block;
+}
+.cover-content > .edit-cover-button{
+    display: block;
+}
+.cover-content > div.cover-user-names{
+    position: absolute;
+    bottom: 3em;
+    left: 21em;
+}
+.cover-content > div.cover-profile-edit-button{
+    position: absolute;
+    bottom: 5em;
+    right: 3em;
+}
+.cover-content > div > h2, .cover-content > div > h4{
+    font-size: 2rem;
+    text-shadow: 2px 2px #8c8c8c;
+}
+.cover-content > div > h2{
+    color: #ffffff;
+
+}
+.cover-content > div > h4{
+    color: #e0e0e0;
+}
+.cover-parent > .profile-menu-buttons{
+    background-color: #E8E8E8;
+    border-left: 1px #ccd0d2 solid;
+    border-right: 1px #ccd0d2 solid;
+    border-bottom: 1px #ccd0d2 solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 3.1em;
+    position: relative;
+    width: 100%;
+}
+.cover-parent > .profile-menu-buttons > div:first-child{
+    border-bottom-left-radius: 5px;
+}
+.cover-parent > .profile-menu-buttons > div:last-child{
+    border-bottom-right-radius: 5px;
+}
+.cover-parent > .profile-menu-buttons > div{
+    background-color: #ffffff;
+    height: 3em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cover-parent > .profile-menu-buttons > .profile-menu-avatar{
+    position: relative;
+    width: 22em;
+}
+.cover-parent > .profile-menu-buttons > .profile-menu-button{
+    text-align: center;
+    width: 22%;
+}
+.cover-parent > .profile-menu-buttons > div > div{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 15em;
+}
+.cover-parent > .profile-menu-buttons > div .profile-photo-edit-button{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 7.5px;
+    width: 100%;
+}
+.cover-parent > .profile-menu-buttons > div:hover .profile-photo-edit-button{
+    background: black;
+    opacity: .7;
+    transition: all .5s;
+}
+.cover-parent > .profile-menu-buttons > div:hover .profile-photo-edit-button a span:last-child{
+    display: inline-block;
+}
+.cover-parent > .profile-menu-buttons > div .profile-photo-edit-button a{
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+}
+.cover-parent > .profile-menu-buttons > div > a{
+    display: block;
+    line-height: 3em;
+    position: relative;
+}
+.cover-parent > .profile-menu-buttons > div > a:active:before,.cover-parent > .profile-menu-buttons > div > a.selected:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #E9EBEE;
+    bottom: -1px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+.photo-list-panel ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.photo-list-panel ul > li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.photo-list-panel ul > li img{
+    width: 6em;
+}
+
+.frind-list-content img{
+    width: 6em;
+}
+.frind-list-content a{
+    position: relative;
+}
+.frind-list-content a > span{
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    display: block;
+    font-size: 11.5px;
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+.gradient{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    color: #ffffff;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    background: -webkit-linear-gradient(-90deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background: -moz-linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 150%, rgba(0,0,0,1) 100%);
+    background-position: 50% 50%;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+}
+.popover.profile-popover{
+    box-shadow: 0 0 15px grey;
+}
+.content-popover > div{
+    width: 20em;
+}
+.content-popover .user-cover{
+    height: 8em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.content-popover .user-info{
+    height: 5.5em;
+}
+.content-popover .user-info div{
+    top: 6.5rem ;
+    left: 8em;
+    position: absolute;
+}
+.content-popover .user-info div > p{
+    font-weight: bold;
+    color: white;
+    width: 15.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.content-popover .user-info img{
+    bottom: 3em;
+    left: 1em;
+    max-width: 6em;
+    position: absolute;
+}
+.content-popover .user-buttons{
+    border-top: thin solid #7f7f7f;
+    height: 2.5em;
+}
+.content-popover .user-buttons a{
+    display: block;
+    color: darkgrey;
+    line-height: 2.5em;
+    text-decoration: none;
+}
+.content-popover .user-buttons a:hover{
+    background-color: darkgrey;
+    color: white;
+}
+.content-popover .user-buttons a:not(:last-child){
+    border-right: thin solid #7f7f7f;
+}
+@media (min-width: 1200px){}
+@media (max-width: 1199px){}
+@media (min-width: 992px){}
+@media (max-width: 991px){}
+@media (min-width: 768px) {}
+@media (max-width: 767px){}
+@media screen and (min-width: 768px){}
+@media screen and (max-width: 767px){}
+@media (max-device-width: 480px) and (orientation: landscape){}
+@media (min-width: 992px) and (max-width: 1199px){}
+
