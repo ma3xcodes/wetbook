@@ -9,4 +9,7 @@ Route::group(['prefix'=>'postajax'], function(){
     Route::post('/createpost', [
         'uses'  => 'PostAjaxCtrl@createPost'
     ])->name('create.post');
+    Route::post('/changelanguage', [
+        'uses'  => 'PostAjaxCtrl@changeLanguage'
+    ])->name('change.lang');
 });

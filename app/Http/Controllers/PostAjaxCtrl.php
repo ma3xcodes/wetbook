@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Language;
 use App\Post;
 use Illuminate\Database\Eloquent\MassAssignmentException;
 use Illuminate\Database\QueryException;
@@ -39,12 +40,7 @@ class PostAjaxCtrl extends Controller
                 'message'   => 'Post create succes.',
                 'photo' => $photo ? $photo : null
             ];
-        } catch (\Exception $e) {
-            return [
-                'status'    => 'error',
-                'message'   => $e->getMessage()
-            ];
-        }catch (QueryException $e){
+        } catch (QueryException $e){
             return [
                 'status'    => 'error',
                 'message'   => $e->getMessage()
@@ -54,6 +50,19 @@ class PostAjaxCtrl extends Controller
                 'status'    => 'error',
                 'message'   => $e->getMessage()
             ];
+        }
+    }
+
+    public function changeLanguage(Request $request)
+    {
+        if($request->lang){
+            $lang_id_encoded = \Hashids::decode($request->lang);
+            $lang = Language::find($lang_id_encoded[0]);
+            if(auth()->user()->profile->update(array('language_id' => $lang->id))){
+                return "Haz cambiado el lenguage.";
+            }else{
+                return "No se pudo actualizar el lenguage.";
+            }
         }
     }
 

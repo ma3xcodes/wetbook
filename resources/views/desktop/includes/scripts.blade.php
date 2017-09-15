@@ -20,9 +20,36 @@
             });
             return false;
         });
+
+        $(document).on('click','.select-language',function(){
+            let element = $(this);
+            let lang = element.data('lang');
+            $.ajax({
+                type: 'POST',
+                url: "{{route('change.lang')}}",
+                data: {lang:lang},
+                beforeSend: function(){
+
+                },
+                success: function(res){
+                    iziToast.success({
+                        title: 'Hey',
+                        message: res
+                    });
+                    $('.change-language-link').text(element.text());
+                    $('.main-modal').modal('toggle');
+                },
+                error: function(err){
+                    iziToast.error({
+                        title: 'Hey',
+                        message: err
+                    });
+                }
+            });
+        });
         $('html').on('mouseup', function(e) {
             if(!$(e.target).closest('.popover').length) {
-                console.log($(e.target).closest('.popover'));
+                //console.log($(e.target).closest('.popover'));
                 $('.popover').popover('hide');
             }
         });

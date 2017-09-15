@@ -36,4 +36,10 @@ class Profile extends Model
     {
         return $this->hasOne(Photo::class, 'user_id', 'user_id')->where('is_cover', true)->first();
     }
+
+    public function lang()
+    {
+        //return $this->hasOne(Language::class);
+        return Language::where('id',$this->language_id)->first();
+    }
 }

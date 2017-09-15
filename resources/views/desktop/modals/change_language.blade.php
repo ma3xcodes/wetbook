@@ -8,7 +8,9 @@
             <div class="row">
                 @foreach($languages as $key => $lang)
                     <div class="col-xs-3">
-                        <a href="#"class="btn btn-link btn-block btn- @if(!$lang->is_enable) disabled text-muted @endif">{{$lang->language}}</a>
+                        <a href="#" class="btn select-language btn-link btn-block btn- @if(!$lang->is_enable) disabled text-muted @endif" @if($lang->is_enable) data-lang="{{\Hashids::encode($lang->id)}}" @endif>
+                            {{$lang->language}}
+                        </a>
                     </div>
                 @endforeach
             </div>
